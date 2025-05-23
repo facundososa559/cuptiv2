@@ -1,0 +1,456 @@
+.advanced-calculator {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: transparent;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  font-size: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.advanced-calculator h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.advanced-calculator h3 {
+  font-size: 17px;
+  margin-bottom: 25px;
+  color: var(--primary-dark);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.main-container {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+  align-items: stretch;
+  transition: all 0.5s ease;
+}
+
+.factura-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.factura-img-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background: rgba(248, 249, 250, 0.7);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  padding: 15px;
+  overflow: visible;
+}
+
+.factura-ejemplo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  position: relative;
+  z-index: 1;
+}
+
+.input-fields {
+  flex: 1;
+  background: rgba(248, 249, 250, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  min-height: 500px;
+  position: relative;
+  gap: 16px;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 500;
+  color: var(--primary);
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.input-group select,
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.input-group select.input-error,
+.input-group input.input-error {
+  border-color: #e74c3c !important;
+}
+
+.input-group select:focus,
+.input-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 136, 74, 0.2);
+}
+
+.advanced-calculator button {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.advanced-calculator button:hover {
+  background: var(--accent-dark);
+  transform: scale(1.02);
+}
+
+.nota-legal {
+  font-size: 13px;
+  color: var(--neutral-600);
+  text-align: left;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+}
+
+.ahorro-mensual {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.ahorro-mensual h3 {
+  font-size: 20px;
+  color: var(--primary);
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.ahorro-valor {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.ahorro-valor .positive {
+  color: var(--accent);
+}
+
+.ahorro-valor .negative {
+  color: #e74c3c;
+}
+
+.resumen {
+  font-size: 20px;
+  color: var(--primary);
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.detalles-tarifas {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.detalles-tarifas .column {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+.detalles-tarifas .column:nth-child(1) {
+  animation-delay: 0.9s;
+}
+
+.detalles-tarifas .column:nth-child(2) {
+  border: 0.5px solid var(--accent);
+  box-shadow: 0 0 5px var(--accent);
+  animation-delay: 1.2s;
+}
+
+.detalles-tarifas h3 {
+  font-size: 16px;
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.detalles-tarifas .item {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.detalles-tarifas .item:last-child {
+  border-bottom: none;
+}
+
+.detalles-tarifas .item strong {
+  display: block;
+  font-size: 14px;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.detalles-tarifas .item span {
+  font-size: 14px;
+  color: #333;
+}
+
+.contacto {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 17px;
+  color: var(--primary-dark);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.contacto a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contacto a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  font-weight: 500;
+  display: none;
+  margin-top: 5px;
+}
+
+.error-message.visible {
+  display: block;
+}
+
+.alerta-ahorro-negativo {
+  color: #e74c3c;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: 6px;
+  border: 0.5px solid #e74c3c;
+  display: none;
+  text-align: center;
+}
+
+.alerta-ahorro-negativo.show {
+  display: block;
+}
+
+.botones-finales {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+  animation-delay: 1.8s;
+}
+
+.volver-calcular,
+.contactarse {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+
+.volver-calcular {
+  background: var(--accent);
+  color: #fff;
+}
+
+.volver-calcular:hover {
+  background: var(--accent-dark);
+}
+
+.contactarse {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.contactarse:hover {
+  background: var(--secondary-dark);
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-number-ref {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.zoom-view {
+  position: absolute;
+  border: 2px solid var(--secondary);
+  border-radius: 50%;
+  overflow: hidden;
+  display: none;
+  z-index: 30;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.zoom-view img {
+  position: absolute;
+  transform-origin: 0 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .advanced-calculator {
+    padding: 12px;
+  }
+
+  .detalles-tarifas {
+    flex-direction: column;
+  }
+
+  .ahorro-valor {
+    font-size: 28px;
+  }
+
+  .factura-container,
+  .input-fields {
+    min-height: auto;
+  }
+
+  .input-fields,
+  .column {
+    gap: 12px;
+  }
+}

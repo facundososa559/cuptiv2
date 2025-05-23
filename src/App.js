@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Footer from './components/Footer/Footer';
+import NavBar from './components/Navbar/NavBar';
+import Home from './pages/Home';
+import Calculator from './pages/Calculator';
+import EnergiasRenovables from './pages/EnergiasRenovables';
+import EficienciaEnergetica from './pages/EficienciaEnergetica';
+import DisenoIndustrial from './pages/DisenoIndustrial';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <NavBar />
+          <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/servicios/energias-renovables" element={<EnergiasRenovables />}/>
+          <Route path="/servicios/eficiencia-energetica" element={<EficienciaEnergetica />}/>
+          <Route path="/servicios/diseno-industrial" element={<DisenoIndustrial />}/>
+          <Route path="/calculadora" element={<Calculator />} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }

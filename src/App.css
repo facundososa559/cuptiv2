@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+/* Imports */
+@import url("./css/reset.css");
+
+body {
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    font-size: var(--font-size);
+    font-weight: var(--regular);
+    margin: 0%;
+    padding: 0%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  /* Tipografía */
+  --font-family: "Poppins",  sans-serif;
+  --line-height: 1.3;
+  --letter-spacing: 0.2px;
+  --font-size: 1rem;
+  --regular: 400;
+  --medium: 500;
+
+
+  /* Colores principales */
+  --secondary: #00884a;
+  --secondary-dark: #006e3c;
+  --secondary-light: #4cb97f;
+  --primary: #005a8c;
+  --primary-dark: #004a73;
+  --primary-light: #3d7fa6;
+  --accent: #f39200;
+  --accent-dark: #d17e00;
+  --accent-light: #ffb84d;
+
+  /* Colores neutros */
+  --neutral-100: #ffffff;
+  --neutral-200: #f8f9fa;
+  --neutral-300: #e9ecef;
+  --neutral-400: #dee2e6;
+  --neutral-500: #adb5bd;
+  --neutral-600: #6c757d;
+  --neutral-700: #495057;
+  --neutral-800: #343a40;
+  --neutral-900: #212529;
+
+  /* Espaciado */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Bordes */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1136px !important;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ============ TYPOGRAPHY ============= */
+
+/* ======= section-title-xl ======== */
+
+.section-title-xl {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.section-title-xl::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ============ section-title-lg ==============*/
+
+.section-title-lg {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.section-title-lg::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+/* ========= section-title-md ========== */
+
+.section-title-md {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-weight: 500;
+}
+
+.section-title-md::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+/* ======= section-title-sm ========= */
+
+.section-title-sm {
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* ======= section-title-xs ======== */
+
+.section-title-xs {
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 500;
 }

@@ -1,0 +1,43 @@
+.opportunities {
+  background-color: var(--neutral-200);
+  padding: 5rem 0;
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--neutral-600);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.opportunity-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opportunity-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.opportunity-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .opportunities {
+    display: none;
+  }
+}

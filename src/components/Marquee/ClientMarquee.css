@@ -1,0 +1,43 @@
+.client-marquee {
+  background-color: var(--neutral-200);
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+}
+
+.client-logo {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  min-width: 200px;
+}
+
+.client-logo img {
+  max-width: 100%;
+  max-height: 70px;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.client-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .client-logo {
+    padding: 1rem;
+    min-width: 150px;
+  }
+}

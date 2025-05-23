@@ -1,0 +1,79 @@
+.counters-section {
+  padding: 0rem 0rem 4rem 0rem;
+}
+
+.counters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.counter-card {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.counter-header {
+  margin-bottom: 1rem;
+}
+
+.icon-trending-up,
+.icon-bar-chart,
+.icon-zap {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* ===== ICONOS ======= */
+.icon-trending-up {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300884a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>');
+}
+
+.icon-bar-chart {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300884a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>');
+}
+
+.icon-zap {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300884a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>');
+}
+
+/* ======= TYPO =========== */
+
+.counter-value {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.counter-label {
+  font-size: 1rem;
+  color: var(--neutral-600);
+}
+
+/* ========== MEDIA QUERIES ============= */
+
+@media (max-width: 992px) {
+  .counters {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .counter-value {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .counters {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
