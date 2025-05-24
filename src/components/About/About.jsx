@@ -34,14 +34,14 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="section-title-xl">Quienes somos</h2>
-            <p className="about-lead">
+            <p className="text-color-light">
               Somos una empresa cooperativa especializada en soluciones energéticas eficientes y sostenibles.
             </p>
-            <p className="about-lead">
+            <p className="text-color-light">
               CUPTI Ingeniería fue fundada en el año 2013 por seis socios, en aquel entonces estudiantes de ingeniería,
               con el objetivo de convertirse en la referencia en el sector de la ingeniería y la eficiencia energética.
             </p>
-            <p className="about-lead">
+            <p className="text-color-light">
               Desde nuestra fundación, hemos incorporado nuevos socios y áreas de especialización para ofrecer
               soluciones integrales que ayudan a nuestros clientes a optimizar sus recursos energéticos y mejorar sus
               procesos industriales.

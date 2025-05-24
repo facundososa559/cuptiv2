@@ -1,4 +1,4 @@
-/* Actualizar los estilos para que coincidan con la versión alternativa */
+
 .mini-calculator-section {
   padding: 3rem 0;
 }
@@ -35,19 +35,6 @@
   margin-right: 0.5rem;
 }
 
-.mini-calculator-title {
-  color: var(--primary);
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-/* =========== CALC DESCRIPTION ================ */
-
-.calculator-description {
-  font-size: 1rem;
-  color: var(--neutral-600);
-  margin-bottom: 1rem;
-}
 
 /* ========== FORM GROUP ============ */
 
@@ -85,7 +72,7 @@
 }
 
 .error-message {
-  color: #e74c3c;
+  color: var(--primary);
   font-size: 0.9rem;
   margin-top: 0.5rem;
   padding: 0.5rem;
@@ -93,38 +80,6 @@
   border-radius: 4px;
 }
 
-/* ============= CALCULATOR BUTTONS ============ */
-
-.btn-calculate {
-  background-color: var(--secondary);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 0.75rem;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-calculate:hover {
-  background-color: var(--secondary-dark);
-  transform: translateY(-2px);
-}
-
-.btn-calculate:disabled {
-  background-color: var(--neutral-500);
-  cursor: not-allowed;
-  transform: none;
-}
-
-.calculator-note {
-  font-size: 0.85rem;
-  color: var(--neutral-600);
-  margin-top: 1.5rem;
-  text-align: center;
-  font-style: italic;
-}
 
 /* ============= LINKS ============= */
 
@@ -156,7 +111,7 @@
   transform: translateX(3px);
 }
 
-/* Resultados */
+/* =========== Resultados =============== */
 .calculator-results {
   animation: fadeIn 0.5s ease-out;
 }
@@ -202,7 +157,7 @@
 .amount {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--secondary);
 }
 
 .period {
@@ -235,6 +190,7 @@
 }
 
 .detail-value {
+  color: var(--secondary);
   font-weight: 600;
 }
 
@@ -244,41 +200,7 @@
   margin-bottom: 1.5rem;
 }
 
-.btn-recalculate,
-.btn-advanced {
-  flex: 1;
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
 
-.btn-recalculate {
-  background-color: var(--neutral-200);
-  color: var(--primary);
-  border: 1px solid var(--neutral-300);
-}
-
-.btn-recalculate:hover {
-  background-color: var(--neutral-300);
-}
-
-.btn-advanced {
-  background-color: var(--secondary);
-  color: white;
-  border: none;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-advanced:hover {
-  background-color: var(--secondary-dark);
-}
 
 .contact-prompt {
   text-align: center;

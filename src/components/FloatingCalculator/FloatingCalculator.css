@@ -24,7 +24,7 @@
 }
 
 .floating-calculator:hover {
-  background-color: var(--accent);
+  background-color: var(--secondary-dark);
   transform: scale(1.05);
 }
 

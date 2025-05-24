@@ -1,7 +1,7 @@
-"use client"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
+import ProjectFilters from "./ProjectFilters/ProjectFilters"
+import ProjectList from "./ProjectList"
 import "./Projects.css"
 
 const Projects = () => {
@@ -46,25 +46,13 @@ const Projects = () => {
   ]
 
   const filteredProjects =
-    activeFilter === "todos" ? projects : projects.filter((project) => project.category === activeFilter)
-
-  const getCategoryName = (category) => {
-    switch (category) {
-      case "energias-renovables":
-        return "Energías Renovables"
-      case "eficiencia-energetica":
-        return "Eficiencia Energética"
-      case "ingenieria-industrial":
-        return "Ingeniería Industrial"
-      default:
-        return category
-    }
-  }
+    activeFilter === "todos"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter)
 
   return (
     <section className="projects section" id="proyectos">
       <div className="container">
-        {/* TÍTULO animado */}
         <motion.h2
           className="section-title-xl"
           initial={{ opacity: 0, y: 30 }}
@@ -75,76 +63,17 @@ const Projects = () => {
           Proyectos destacados
         </motion.h2>
 
-        {/* BOTONES animados */}
-        <motion.div
-          className="projects-filters"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <div className="filter-icon"></div>
-          <button
-            className={`filter-btn ${activeFilter === "todos" ? "active" : ""}`}
-            onClick={() => setActiveFilter("todos")}
-          >
-            Todos
-          </button>
-          <button
-            className={`filter-btn ${activeFilter === "energias-renovables" ? "active" : ""}`}
-            onClick={() => setActiveFilter("energias-renovables")}
-          >
-            Energías renovables
-          </button>
-          <button
-            className={`filter-btn ${activeFilter === "eficiencia-energetica" ? "active" : ""}`}
-            onClick={() => setActiveFilter("eficiencia-energetica")}
-          >
-            Eficiencia energética
-          </button>
-          <button
-            className={`filter-btn ${activeFilter === "ingenieria-industrial" ? "active" : ""}`}
-            onClick={() => setActiveFilter("ingenieria-industrial")}
-          >
-            Ingeniería industrial
-          </button>
-        </motion.div>
+        <ProjectFilters
+          activeFilter={activeFilter}
+          setActiveFilter={setActiveFilter}
+        />
 
-        {/* GRILLA animada (fade in contenedor) */}
-        <motion.div
-          className="projects-grid"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          {filteredProjects.map((project, index) => (
-            <motion.a
-              key={project.id}
-              href={`/proyectos/${project.id}`}
-              className="project-card"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-                ease: "easeOut",
-              }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h3 className="section-title-sm">{project.title}</h3>
-              <p className="project-description">{project.description}</p>
-              <div className="project-footer">
-                <span className="project-year">{project.year}</span>
-                <span className="project-link">Ver proyecto</span>
-              </div>
-            </motion.a>
-          ))}
-        </motion.div>
+        <ProjectList projects={filteredProjects} />
       </div>
     </section>
   )
 }
 
 export default Projects
+
 

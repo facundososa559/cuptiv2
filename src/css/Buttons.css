@@ -1,0 +1,98 @@
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============= CALCULATOR BUTTONS ============ */
+
+.btn-calculate {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-calculate:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-calculate:disabled {
+  background-color: var(--neutral-500);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.calculator-note {
+  font-size: 0.85rem;
+  color: var(--neutral-600);
+  margin-top: 1.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+
+.btn-recalculate,
+.btn-advanced {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-recalculate {
+  background-color: var(--neutral-200);
+  color: var(--primary);
+  border: 1px solid var(--neutral-300);
+}
+
+.btn-recalculate:hover {
+  background-color: var(--neutral-300);
+}
+
+.btn-advanced {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-advanced:hover {
+  background-color: var(--secondary-dark);
+}

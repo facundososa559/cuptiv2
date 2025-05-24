@@ -27,44 +27,6 @@
   gap: 0.5rem;
 }
 
-
-/* =========== CARD TYPO =============== */
-
-.service-title {
-  color: var(--primary);
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
-.service-description {
-  color: var(--neutral-600);
-  flex-grow: 1;
-}
-
-.service-link {
-  color: var(--secondary);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.service-link:hover {
-  color: var(--accent);
-}
-
-.service-link::after {
-  content: "→";
-  margin-left: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.service-link:hover::after {
-  transform: translateX(5px);
-}
-
-
 /* ======== ICON STYLE ============= */
 
 .icon-zap,

@@ -50,8 +50,8 @@ const ServicesCards = () => {
                 </div>
                 <h3 className="section-title-sm">{service.title}</h3>
               </div>
-              <p className="service-description">{service.description}</p>
-              <a href={service.link} className="service-link">
+              <p className="text-color-light">{service.description}</p>
+              <a href={service.link} className="link">
                 Más información
               </a>
             </motion.div>

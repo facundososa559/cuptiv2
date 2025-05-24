@@ -62,7 +62,7 @@ const ClientMarquee = () => {
 
   return (
     <section className="client-marquee">
-      <div className="container">
+      <div>
         <div className="marquee-container">
           <div className="marquee-track" ref={marqueeRef}>
             {clients.map((client, index) => (

@@ -112,7 +112,7 @@ const MiniCalculator = () => {
           <>
             <form onSubmit={calcularAhorro} className="calculator-form">
               <div className="mini-calculator-header">
-                <h3 className="section-title-lg">Calcula cuánto puedes ahorrar con nosotros</h3>
+                <h3 className="section-title-lg">Calculadora de ahorro</h3>
               </div>
               <div className="form-group">
                 <label htmlFor="consumo">¿Cuál es tu consumo mensual? (kWh)</label>

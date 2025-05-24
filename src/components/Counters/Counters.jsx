@@ -28,7 +28,7 @@ const Counters = () => {
       value: 135000,
       suffix: "+",
       label: "kWh ahorrados en todo el país",
-      iconClass: "icon-zap",
+      iconClass: "counter-icon-zap",
     },
   ]
 

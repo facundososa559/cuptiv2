@@ -1,6 +1,5 @@
 .client-marquee {
-  background-color: var(--neutral-200);
-  padding: 3rem 0;
+  padding: 0 0 3rem 0;
   overflow: hidden;
 }
 

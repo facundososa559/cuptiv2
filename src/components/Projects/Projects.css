@@ -1,52 +1,5 @@
 .projects {
-  background-color: var(--neutral-200);
   padding: 5rem 0;
-}
-
-
-/* ========== FILTERS ============= */
-
-.projects-filters {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.filter-icon {
-  width: 20px;
-  height: 20px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300884a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 0.5rem;
-}
-
-.filter-btn {
-  background: none;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-md);
-  color: var(--neutral-700);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: var(--font-family);
-  line-height: var(--line-height);
-  letter-spacing: var(--letter-spacing);
-  font-size: var(--font-size);
-}
-
-.filter-btn:hover {
-  color: var(--secondary);
-  background-color: var(--neutral-200);
-}
-
-.filter-btn.active {
-  background-color: var(--secondary);
-  color: white;
 }
 
 /* ============ CONTAINERS =============== */
@@ -73,17 +26,12 @@
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
 
 
-/* ================ TEXT ============= */
+/* ================ PROJECT FOOTER ============= */
 
-.project-description {
-  color: var(--neutral-600);
-  flex-grow: 1;
-}
 
 .project-footer {
   display: flex;
@@ -101,25 +49,12 @@
 
 /* =========== LINK ============ */
 
-.project-link {
-  color: var(--primary);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
-}
 
-.project-link::after {
-  content: "→";
-  margin-left: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-link {
+.project-card:hover .link {
   color: var(--accent);
 }
 
-.project-card:hover .project-link::after {
+.project-card:hover .link::after {
   transform: translateX(5px);
 }
 

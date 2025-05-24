@@ -1,5 +1,6 @@
 /* Imports */
 @import url("./css/reset.css");
+@import url("./css/Buttons.css");
 
 body {
     font-family: var(--font-family);
@@ -144,4 +145,38 @@ body {
   color: var(--primary);
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* ========= text color light ============== */
+
+.text-color-light {
+  color: var(--neutral-600);
+  flex-grow: 1;
+}
+
+
+/* ============ LINKS ============= */
+
+
+.link {
+  color: var(--secondary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.link::after {
+  content: "→";
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: translateX(5px);
 }

@@ -15,10 +15,10 @@ function Home() {
       <Hero />
       <FloatingCalculator />
       <ServicesCards />
+      <ClientMarquee />
       <About />
       <Counters />
       <Projects />
-      <ClientMarquee />
       <Contact />
     </>
   )
