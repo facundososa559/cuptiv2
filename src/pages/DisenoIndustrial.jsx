@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion"
 import Hero from '../components/Hero/Hero'
 import About from "../components/About/About"
 import ProjectDetail from '../components/Projects/ProjectDetail'
@@ -45,7 +46,17 @@ function DisenoIndustrial() {
         }
       />
 
-      <section className='section'>
+      <section className='container section'>
+        <motion.h2
+          className="section-title-xl"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          Proyectos
+        </motion.h2>
+        
         <ProjectDetail
           id="esculturaLATU"
           image={engineer}
