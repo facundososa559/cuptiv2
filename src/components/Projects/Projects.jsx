@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import ProjectFilters from "./ProjectFilters/ProjectFilters"
-import ProjectList from "./ProjectList"
+import ProjectListCard from "./ProjectListCard"
 import "./Projects.css"
 
 const Projects = () => {
@@ -9,38 +9,52 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
+      id: "aerogeneradorDarrieus",
       title: "Aerogenerador Derioux",
       description: "Prototipo construido en 2013 en Facultad de Ingeniería UdelaR.",
       category: "energias-renovables",
       year: "2013",
     },
     {
-      id: 2,
+      id: "copagran",
       title: "Copagran",
       description: "Auditoría energética realizada en planta de Young departamento de Río Negro.",
       category: "eficiencia-energetica",
       year: "2018",
     },
     {
-      id: 3,
+      id: "ctc",
       title: "CTC",
       description: "Auditoría energética realizada en la planta de fabricación de productos cerámicos de empresa CTCM.",
       category: "eficiencia-energetica",
       year: "2019",
     },
     {
-      id: 4,
+      id: "funsa",
       title: "FUNSA",
       description: "Auditoría energética en planta de fabricación de calerías de FUNSA.",
       category: "eficiencia-energetica",
       year: "2020",
     },
     {
-      id: 5,
+      id: "esculturaLATU",
       title: "Escultura en Movimiento LATU",
       description: "Escultura cinética con movimiento rotativo entre sus módulos.",
-      category: "ingenieria-industrial",
+      category: "diseno-industrial",
+      year: "2017",
+    },
+    {
+      id: "ucot",
+      title: "UCOT",
+      description: "Auditoria sobre el consumo de combustible y funcionamiento de la flota de unidades de transporte de la empresa UCOT.",
+      category: "eficiencia-energetica",
+      year: "2017",
+    },
+    {
+      id: "coleme",
+      title: "COLEME",
+      description: "Auditoria energética en la planta de producción de leche pausterizada y fabricación de quesos.",
+      category: "eficiencia-energetica",
       year: "2017",
     },
   ]
@@ -68,7 +82,7 @@ const Projects = () => {
           setActiveFilter={setActiveFilter}
         />
 
-        <ProjectList projects={filteredProjects} />
+        <ProjectListCard projects={filteredProjects} />
       </div>
     </section>
   )

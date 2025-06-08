@@ -1,6 +1,13 @@
 import { motion } from "framer-motion"
+import { useNavigate } from "react-router-dom"
 
-const ProjectList = ({ projects }) => {
+const ProjectListCard = ({ projects }) => {
+  const navigate = useNavigate()
+
+  const handleClick = (category, id) => {
+    navigate(`/servicios/${category}#${id}`)
+  }
+
   return (
     <motion.div
       className="projects-grid"
@@ -10,9 +17,9 @@ const ProjectList = ({ projects }) => {
       viewport={{ once: true }}
     >
       {projects.map((project, index) => (
-        <motion.a
+        <motion.div
           key={project.id}
-          href={`/proyectos/${project.id}`}
+          onClick={() => handleClick(project.category, project.id)}
           className="project-card"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,6 +29,7 @@ const ProjectList = ({ projects }) => {
             ease: "easeOut",
           }}
           viewport={{ once: true, amount: 0.3 }}
+          style={{ cursor: "pointer" }}
         >
           <h3 className="section-title-sm">{project.title}</h3>
           <p className="text-color-light">{project.description}</p>
@@ -29,10 +37,11 @@ const ProjectList = ({ projects }) => {
             <span className="link">Ver proyecto</span>
             <span className="project-year">{project.year}</span>
           </div>
-        </motion.a>
+        </motion.div>
       ))}
     </motion.div>
   )
 }
 
-export default ProjectList
+export default ProjectListCard
+

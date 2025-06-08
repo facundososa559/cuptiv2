@@ -1,28 +1,34 @@
 import "./Opportunities.css"
 
+import opportunity1 from "../../assets/opportunities-images/desktop/opportunity-1.png"
+import opportunity2 from "../../assets/opportunities-images/desktop/opportunity-2.jpeg"
+import opportunity3 from "../../assets/opportunities-images/desktop/opportunity-3.jpeg"
+import opportunity4 from "../../assets/opportunities-images/desktop/opportunity-4.jpeg"
+
+
 const Opportunities = () => {
   const opportunities = [
     {
       id: 1,
-      image: "/assets/opportunity-1.jpg",
+      image: opportunity1,
       alt: "Programa E-Subite - Motos y triciclos eléctricos a tu alcance",
       url: "#",
     },
     {
       id: 2,
-      image: "/assets/opportunity-2.png",
+      image: opportunity2,
       alt: "MiPymes Eficientes - Apoyo para mipymes eficientes",
       url: "#",
     },
     {
       id: 3,
-      image: "/assets/opportunity-3.jpg",
+      image: opportunity3,
       alt: "Certificados de Eficiencia Energética - Un reconocimiento económico a las medidas de eficiencia energética",
       url: "#",
     },
     {
       id: 4,
-      image: "/assets/opportunity-4.jpg",
+      image: opportunity4,
       alt: "Convocatoria LAEE 2025 - Línea de asistencia para eficiencia energética",
       url: "#",
     },
@@ -31,8 +37,8 @@ const Opportunities = () => {
   return (
     <section className="opportunities section">
       <div className="container">
-        <h2 className="section-title">Oportunidades en eficiencia energética</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title-xl">Oportunidades en eficiencia energética</h2>
+        <p className="text-color-light">
           Programas y convocatorias disponibles para financiar tus proyectos de eficiencia energética
         </p>
 

@@ -3,6 +3,7 @@
 
 .about {
   padding: 5rem 0;
+  background-color: var(--neutral-200);
 }
 
 .about-content {
@@ -53,8 +54,10 @@
 }
 
 .about-text p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
+
+
 
 
 @media (max-width: 992px) {

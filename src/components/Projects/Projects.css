@@ -58,6 +58,22 @@
   transform: translateX(5px);
 }
 
+
+/* ================== PROJECT DETAIL ===================== */
+
+.project-image {
+  width: 30%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.project-detail-container {
+  display: flex;
+  padding: 2rem 0rem;
+  gap: 2rem;
+}
+
 /* ========== MEDIA =============== */
 
 @media (max-width: 768px) {

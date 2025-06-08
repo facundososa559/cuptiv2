@@ -2,40 +2,20 @@
 
 import { useState, useEffect } from "react"
 import "./Hero.css"
-import heroBg1 from "../../assets/hero-backrounds/hero-background-1.svg"
-import heroBg2 from "../../assets/hero-backrounds/hero-background-2.svg"
 
-const Hero = ({headline}) => {
+const Hero = ({ items = [], autoSlide = true, interval = 6000 }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
-  const headlines = [
-    {
-      title: "Reduce hasta un 40% tu factura energética",
-      subtitle:
-        "Soluciones especializadas en energías renovables y eficiencia energética para empresas que buscan optimizar costos y ser más sostenibles.",
-      image: heroBg1,
-      cta: "Calcular mi ahorro",
-      ctaLink: "#calculadora",
-    },
-    {
-      title: "Energía renovable para tu negocio",
-      subtitle:
-        "Instalación de paneles solares y sistemas de energía renovable con retorno de inversión en menos de 5 años.",
-      image: heroBg2,
-      cta: "Ver nuestros servicios",
-      ctaLink: "#servicios",
-    },
-  ]
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % headlines.length)
-    }, 6000)
+    if (!autoSlide || items.length <= 1) return
 
-    return () => clearInterval(interval)
-  }, [headlines.length])
+    const timer = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % items.length)
+    }, interval)
 
-  // Función para manejar el clic en los indicadores
+    return () => clearInterval(timer)
+  }, [items.length, autoSlide, interval])
+
   const handleIndicatorClick = (index) => {
     setActiveIndex(index)
   }
@@ -43,13 +23,13 @@ const Hero = ({headline}) => {
   return (
     <section className="hero-alternativo">
       <div className="hero-background">
-        {headlines.map((headline, index) => (
+        {items.map((item, index) => (
           <div
             key={index}
             className={`hero-bg-image ${index === activeIndex ? "active" : ""}`}
             style={{ zIndex: index === activeIndex ? 1 : 0 }}
           >
-            <img src={headline.image || "/placeholder.svg"} alt={`Slide ${index + 1}`} className="bg-img" />
+            <img src={item.image || "/placeholder.svg"} alt={`Slide ${index + 1}`} className="bg-img" />
           </div>
         ))}
         <div className="hero-overlay"></div>
@@ -58,7 +38,7 @@ const Hero = ({headline}) => {
       <div className="container hero-container">
         <div className="hero-content">
           <div className="hero-text">
-            {headlines.map((headline, index) => (
+            {items.map((item, index) => (
               <div
                 key={index}
                 className={`hero-headline ${index === activeIndex ? "active" : ""}`}
@@ -67,13 +47,15 @@ const Hero = ({headline}) => {
                   pointerEvents: index === activeIndex ? "auto" : "none",
                 }}
               >
-                <h1>{headline.title}</h1>
-                <p className="hero-subtitle">{headline.subtitle}</p>
-                <div className="hero-cta">
-                  <a href={headline.ctaLink} className="btn btn-accent">
-                    {headline.cta} <span className="arrow-icon">→</span>
-                  </a>
-                </div>
+                <h1>{item.title}</h1>
+                <p className="hero-subtitle">{item.subtitle}</p>
+                {item.cta && (
+                  <div className="hero-cta">
+                    <a href={item.ctaLink} className="btn btn-accent">
+                      {item.cta} <span className="arrow-icon">→</span>
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
           </div>

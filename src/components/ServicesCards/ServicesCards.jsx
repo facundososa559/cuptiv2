@@ -20,12 +20,12 @@ const ServicesCards = () => {
       link: "/servicios/eficiencia-energetica",
     },
     {
-      id: "ingenieria-industrial",
-      title: "Ingeniería Industrial",
+      id: "diseno-industrial",
+      title: "Diseño Industrial",
       iconClass: "icon-settings",
       description:
         "Soluciones de diseño mecánico y automatización industrial para optimizar procesos con alto grado de ingeniería en detalle.",
-      link: "/servicios/ingenieria-industrial",
+      link: "/servicios/diseno-industrial",
     },
   ]
 

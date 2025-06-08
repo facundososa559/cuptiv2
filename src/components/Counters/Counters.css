@@ -1,5 +1,6 @@
 .counters-section {
   padding: 0rem 0rem 4rem 0rem;
+  background-color: var(--neutral-200);
 }
 
 .counters {
@@ -54,7 +55,6 @@
 }
 
 .counter-label {
-  font-size: 1rem;
   color: var(--neutral-600);
 }
 

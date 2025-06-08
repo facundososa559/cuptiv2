@@ -52,8 +52,6 @@
 
 /* ========== Hero Content ============= */
 
-
-
 .hero-container {
   width: 100%;
   position: relative;
@@ -72,7 +70,7 @@
 .hero-text {
   position: relative;
   min-height: 300px;
-  max-width: 800px;
+  max-width: 60%;
 }
 
 .hero-headline {
@@ -93,7 +91,7 @@
 /* ========= HERO TYPO ========== */
 
 .hero-headline h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 1.5rem;
   font-weight: 500;
   line-height: 1.1;
@@ -101,7 +99,7 @@
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   max-width: 600px;
   font-weight: 400;
   margin-bottom: 2rem;
@@ -156,6 +154,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -163,9 +162,11 @@
   100% {
     transform: translateY(0) translateX(-50%);
   }
+
   40% {
     transform: translateY(-20px) translateX(-50%);
   }
+
   60% {
     transform: translateY(-10px) translateX(-50%);
   }
@@ -173,7 +174,11 @@
 
 @media (max-width: 992px) {
   .hero-headline h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+
+  .hero-text {
+    max-width: 80%;
   }
 }
 
@@ -187,10 +192,14 @@
   }
 
   .hero-headline h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
     font-size: 1.1rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
   }
 }

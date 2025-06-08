@@ -14,6 +14,12 @@
 
 /* ================ SERVICE CARD ================ */
 
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .service-card {
   border-radius: 8px;
   display: flex;
@@ -21,10 +27,8 @@
   flex-direction: column;
 }
 
-.service-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.service-card p {
+  flex-grow: 1;
 }
 
 /* ======== ICON STYLE ============= */

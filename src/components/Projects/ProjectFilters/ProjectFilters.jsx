@@ -7,7 +7,7 @@ const ProjectFilters = ({ activeFilter, setActiveFilter }) => {
     { id: "todos", label: "Todos" },
     { id: "energias-renovables", label: "Energías renovables" },
     { id: "eficiencia-energetica", label: "Eficiencia energética" },
-    { id: "ingenieria-industrial", label: "Ingeniería industrial" },
+    { id: "diseno-industrial", label: "Diseño industrial" },
   ]
 
   return (

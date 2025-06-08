@@ -1,10 +1,16 @@
 import { motion } from "framer-motion"
 import "./About.css"
-import engineer from "../../assets/about/quienes-somos-img.jpeg"
 
-const About = () => {
+const About = ({
+  id = "nosotros",
+  image,
+  imageAlt = "Imagen representativa",
+  imageLabel,
+  title = "Título de sección",
+  paragraphs = [],
+}) => {
   return (
-    <section className="about section" id="nosotros">
+    <section className="about section" id={id}>
       <div className="container">
         <div className="about-content">
           {/* Imagen animada */}
@@ -15,14 +21,12 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0 }}
           >
-            <img
-              src={engineer}
-              alt="Ingeniero de CUPTI realizando mediciones eléctricas"
-              className="about-img"
-            />
-            <div className="image-overlay">
-              <span>Desde 2013</span>
-            </div>
+            <img src={image} alt={imageAlt} className="about-img" />
+            {imageLabel && (
+              <div className="image-overlay">
+                <span>{imageLabel}</span>
+              </div>
+            )}
           </motion.div>
 
           {/* Texto animado */}
@@ -33,19 +37,12 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="section-title-xl">Quienes somos</h2>
-            <p className="text-color-light">
-              Somos una empresa cooperativa especializada en soluciones energéticas eficientes y sostenibles.
-            </p>
-            <p className="text-color-light">
-              CUPTI Ingeniería fue fundada en el año 2013 por seis socios, en aquel entonces estudiantes de ingeniería,
-              con el objetivo de convertirse en la referencia en el sector de la ingeniería y la eficiencia energética.
-            </p>
-            <p className="text-color-light">
-              Desde nuestra fundación, hemos incorporado nuevos socios y áreas de especialización para ofrecer
-              soluciones integrales que ayudan a nuestros clientes a optimizar sus recursos energéticos y mejorar sus
-              procesos industriales.
-            </p>
+            <h2 className="section-title-xl">{title}</h2>
+            {paragraphs.map((text, idx) => (
+              <p className="text-color-light" key={idx}>
+                {text}
+              </p>
+            ))}
           </motion.div>
         </div>
       </div>
