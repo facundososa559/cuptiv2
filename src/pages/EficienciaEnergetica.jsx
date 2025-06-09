@@ -48,71 +48,88 @@ function EficienciaEnergética() {
       />
       <Opportunities />
 
-      <section className='container section'>
-        <motion.h2
-          className="section-title-xl"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          Proyectos
-        </motion.h2>
-        
-        <ProjectDetail
-          id="copagran"
-          image={engineer}
-          title="Copagran"
-          bullets={[
-            "Desarrollo web en React",
-            "Optimización para SEO técnico",
-            "Integración con WhatsApp y formulario de contacto",
-          ]}
-        />
+      <section className='project-detail-section'>
+        <div className='container'>
+          <motion.h2
+            className="section-title-xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            Proyectos
+          </motion.h2>
 
-        <ProjectDetail
-          id="ctc"
-          image={engineer}
-          title="CTC"
-          bullets={[
-            "Desarrollo web en React",
-            "Optimización para SEO técnico",
-            "Integración con WhatsApp y formulario de contacto",
-          ]}
-        />
+          <ProjectDetail
+            id="copagran"
+            image={engineer}
+            title="Copagran"
+            bullets={[
+              "Auditoria Energética realizada en planta de Young departamento de Rio Negro",
+              "Se realizaron los siguientes estudios:",
+              "Análisis de secador de granos a GLP.",
+              "Análisis y registro eléctrico de los motores del Sistema de Transporte de granos.",
+              "Análisis y registro eléctrico de los motores del Sistema de Aireación de silos.",
+              "Análisis y registro eléctrico de los motores ventiladores de aspiración de polvos.",
+              "Análisis de Iluminación.",
+              "Análisis de humos de combustión de leña en caldera Humotubular.",
+            ]}
+          />
 
-        <ProjectDetail
-          id="funsa"
-          image={engineer}
-          title="Funsa"
-          bullets={[
-            "Desarrollo web en React",
-            "Optimización para SEO técnico",
-            "Integración con WhatsApp y formulario de contacto",
-          ]}
-        />
+          <ProjectDetail
+            id="ctc"
+            image={engineer}
+            title="CTC"
+            bullets={[
+              "Auditoria energética realiza en la planta de fabricación de productos cerámicos de empalme Olmos.",
+              "Se realizaron los siguientes estudios:",
+              "Sistema de aire comprimido.",
+              "Sistema de molienda.",
+              "Sistema de secado de pasta cerámica.",
+              "Análisis de consumo de GLP en el horno.",
+              "Análisis de consumo energético en ambientes controlados.",
+            ]}
+          />
 
-        <ProjectDetail
-          id="ucot"
-          image={engineer}
-          title="UCOT"
-          bullets={[
-            "Desarrollo web en React",
-            "Optimización para SEO técnico",
-            "Integración con WhatsApp y formulario de contacto",
-          ]}
-        />
+          <ProjectDetail
+            id="funsa"
+            image={engineer}
+            title="Funsa"
+            bullets={[
+              "Auditoria Energética en planta de fabricación de cubiertas de FUNSA",
+              "Se realizaron los siguientes estudios:",
+              "Sistema de aire comprimido.",
+              "Sistema de generación y distribución de vapor.",
+              "Sistema de bombeo de agua.",
+              "Análisis de generador de corriente continúa de 500KW.",
+              "Análisis de consumo energético en ambientes controlados.",
+            ]}
+          />
 
-        <ProjectDetail
-          id="coleme"
-          image={engineer}
-          title="COLEME"
-          bullets={[
-            "Desarrollo web en React",
-            "Optimización para SEO técnico",
-            "Integración con WhatsApp y formulario de contacto",
-          ]}
-        />
+          <ProjectDetail
+            id="ucot"
+            image={engineer}
+            title="UCOT"
+            bullets={[
+              "Se realizó una auditoria sobre el consumo de combustible y funcionamiento de la flota de unidades de transporte de la empresa UCOT.",
+              "La Auditoria se centró en un análisis estadístico de los datos disponibles por la empresa, una caracterización detallada de la ruta por donde se efectúan los recorridos y finalmente ensayos de campo con registro instantáneo de consumo de combustible en diferentes condiciones de manejo y funcionamiento.",
+              "La auditoría arrojo buenos resultados llegando a considerar ahorros de hasta un 10% en el consumo de combustible.",
+            ]}
+          />
+
+          <ProjectDetail
+            id="coleme"
+            image={engineer}
+            title="COLEME"
+            bullets={[
+              "Auditoria energética en la planta de producción de leche pausterizada y fabricación de quesos.",
+              "Se realizaron los siguientes estudios:",
+              "Sistema de generación de frio y banco de hielo.",
+              "Sistema de bombeo de agua.",
+              "Sistema de generación y distribución de vapor.",
+            ]}
+          />
+        </div>
       </section>
 
     </>

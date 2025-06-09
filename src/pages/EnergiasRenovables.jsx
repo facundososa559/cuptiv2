@@ -57,26 +57,27 @@ function EnergíasRenovables() {
           ]
         }
       />
-      <section className='container section'>
-        <motion.h2
-          className="section-title-xl"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          Proyectos
-        </motion.h2>
-        <ProjectDetail
-          id="aerogeneradorDarrieus"
-          image={engineer}
-          title="Aerogenerador Darrieus de eje vertical de palas curvas para escala urbana"
-          bullets={[
-            "Desarrollo web en React",
-            "Optimización para SEO técnico",
-            "Integración con WhatsApp y formulario de contacto",
-          ]}
-        />
+      <section className='project-detail-section'>
+        <div className='container'>
+          <motion.h2
+            className="section-title-xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            Proyectos
+          </motion.h2>
+          <ProjectDetail
+            id="aerogeneradorDarrieus"
+            image={engineer}
+            title="Aerogenerador Darrieus de eje vertical de palas curvas para escala urbana"
+            bullets={[
+              "Prototipo construido en 2013 en Facultad de Ingeniería UdelaR. El rotor del tipo Darrieus con una potencia de 600 W, construido en fibra de vidrio y resina poliéster de 2 metros de altura y 1.5 de diámetro.",
+              "Auditoria energética en la planta de producción de leche pausterizada y fabricación de quesos.",
+            ]}
+          />
+        </div>
       </section>
     </>
   )

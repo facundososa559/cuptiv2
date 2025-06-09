@@ -46,27 +46,28 @@ function DisenoIndustrial() {
         }
       />
 
-      <section className='container section'>
-        <motion.h2
-          className="section-title-xl"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          Proyectos
-        </motion.h2>
-        
-        <ProjectDetail
-          id="esculturaLATU"
-          image={engineer}
-          title="Escultura en Movimiento instalada en el LATU"
-          bullets={[
-            "Desarrollo web en React",
-            "Optimización para SEO técnico",
-            "Integración con WhatsApp y formulario de contacto",
-          ]}
-        />
+      <section className='project-detail-section'>
+        <div className='container'>
+          <motion.h2
+            className="section-title-xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            Proyectos
+          </motion.h2>
+
+          <ProjectDetail
+            id="esculturaLATU"
+            image={engineer}
+            title="Escultura en Movimiento instalada en el LATU"
+            bullets={[
+              "Escultura dotada con movimiento relativo entre sus módulos, mediante 7 articulaciones, accionadas por motores eléctricos, controlados por un PLC y variadores de frecuencia.",
+              "Estructura de acero recubierta por madera, tiene una envergadura de 5 metros de alto y 4 metros de ancho. Construida por las empresas Urumaquinas y Todotaller.",
+            ]}
+          />
+        </div>
       </section>
 
     </>
